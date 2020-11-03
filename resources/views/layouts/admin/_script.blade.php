@@ -13,6 +13,18 @@
 
 <script src="{{asset('assets/admin/plugins/jquery-sparkline/jquery.sparkline.min.js')}}"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script>
+    @if(Session::has('success'))
+    toastr.success("{{ Session::get('success') }}")
+    @endif
+</script>
+
+
+
+@yield('table_script')
+
 <script src="{{asset('assets/admin/pages/dashborad.js')}}"></script>
 
 <script src="{{asset('assets/admin/js/app.js')}}"></script>
+
